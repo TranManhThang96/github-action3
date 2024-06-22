@@ -11,7 +11,7 @@ function run() {
   // 2. upload files
   const s3Uri = `s3://${bucketName}`;
   exec.exec(`aws s3 sync ${distFolder} ${s3Uri} --region ${bucketRegion}`);
-  core.notice('Deploying to S3');
+  core.notice('Deploying to S3 Bucket');
 }
 
 run();
